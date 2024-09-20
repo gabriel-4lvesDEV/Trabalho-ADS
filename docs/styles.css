@@ -82,6 +82,7 @@ main {
     background-color: red;
     display: flex;
     margin-top: 20px;
+    margin-top: 10px;
 }
 
 .login-button button a {
