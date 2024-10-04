@@ -188,3 +188,51 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+body {
+    font-family: sans-serif;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.help-content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 40px; /* Aumentando o padding */
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+h1 {
+    color: red;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: darkred;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: white;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Removendo a decoração dos links */
+a.no-decoration {
+    text-decoration: none; /* Remove a sublinhado dos links */
+    color: red; /* Cor do link */
+}
+
+a.no-decoration:hover {
+    color: darkred; /* Muda a cor ao passar o mouse */
+}
