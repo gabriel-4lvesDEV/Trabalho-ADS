@@ -1,270 +1,291 @@
 * {
-    padding: 0;
-    margin: 0;
+    padding: 0; /* Remove o padding padrão de todos os elementos */
+    margin: 0; /* Remove o margin padrão de todos os elementos */
+    box-sizing: border-box; /* Inclui padding e border na largura e altura dos elementos */
 }
 
 body {
-    font-family: sans-serif;
+    font-family: sans-serif; /* Define a fonte padrão do corpo como sans-serif */
 }
 
-
 header {
-    background-color: white;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    position: relative;
-
+    background-color: white; /* Define a cor de fundo do header como branco */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao header */
+    position: relative; /* Permite posicionamento relativo ao conteúdo */
+    z-index: 1000; /* Eleva o header acima de outros elementos */
 }
 
 main {
-    padding: 20px;
+    padding: 150px 20px 1px; /* Define o padding superior, lateral e inferior do main */
+    width: 100%; /* Define a largura do main como 100% */
+    height: 100vh; /* Define a altura do main como 100% da altura da viewport */
+    display: flex; /* Utiliza Flexbox para layout */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo do main */
+    align-items: center; /* Centraliza verticalmente o conteúdo do main */
 }
 
 .nav-bar {
-    display: flex;
-    justify-content: space-around;
-    padding: 1.6rem 6rem;
+    display: flex; /* Utiliza Flexbox para layout da barra de navegação */
+    justify-content: space-around; /* Distribui os itens da nav-bar com espaço igual entre eles */
+    padding: 1.6rem 6rem; /* Define o padding superior/inferior e lateral da nav-bar */
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-}
-
-.button {
-    display: flex;
-    align-items: center;
+    display: flex; /* Utiliza Flexbox para layout do logo */
+    align-items: center; /* Alinha os itens do logo verticalmente ao centro */
 }
 
 .nav-list {
-    display: flex;
-    align-items: center;
+    display: flex; /* Utiliza Flexbox para layout da lista de navegação */
+    align-items: center; /* Alinha os itens da lista de navegação verticalmente ao centro */
 }
 
 .nav-list ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    
+    display: flex; /* Utiliza Flexbox para layout da lista não ordenada */
+    justify-content: center; /* Centraliza os itens da lista não ordenada */
+    list-style: none; /* Remove os marcadores padrão da lista */
 }
 
 .nav-item {
-    margin: 0 15px;
+    margin: 0 15px; /* Define margem lateral para os itens da lista de navegação */
 }
 
 .nav-link {
-    text-decoration: none;
-    color: red;
-    font-size: 1.15rem;
-    position: relative;
-    padding: 10px;
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: red; /* Define a cor do texto dos links como vermelho */
+    font-size: 1.15rem; /* Define o tamanho da fonte dos links */
+    position: relative; /* Permite o uso de posicionamento absoluto em pseudo-elementos */
+    padding: 10px; /* Define padding para os links */
 }
 
 .nav-link::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 2px solid transparent; 
-    transition: border-color 0.3s; 
+    content: ''; /* Cria um pseudo-elemento antes do link */
+    position: absolute; /* Permite posicionamento absoluto do pseudo-elemento */
+    top: 0; /* Alinha o pseudo-elemento ao topo do link */
+    left: 0; /* Alinha o pseudo-elemento à esquerda do link */
+    right: 0; /* Alinha o pseudo-elemento à direita do link */
+    bottom: 0; /* Alinha o pseudo-elemento à base do link */
+    border: 2px solid transparent; /* Define borda invisível inicialmente */
+    transition: border-color 0.3s; /* Define uma transição suave para a cor da borda */
 }
 
-.nav-link:hover::before {
-    border-color: red; 
+.nav-link:hover::before,
+.nav-link:focus::before {
+    border-color: red; /* Altera a cor da borda ao passar o mouse ou focar no link */
 }
-
 
 .login-button button {
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    background-color: red;
-    display: flex;
-    margin-top: 20px;
-    margin-top: 10px;
+    border: none; /* Remove a borda do botão */
+    padding: 10px 15px; /* Define o padding do botão */
+    border-radius: 5px; /* Adiciona bordas arredondadas ao botão */
+    background-color: red; /* Define a cor de fundo do botão como vermelho */
+    margin-top: 10px; /* Adiciona margem superior ao botão */
 }
 
 .login-button button a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 500;
-    font-size: 1.1rem;
-}
-
-main {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-decoration: none; /* Remove o sublinhado dos links dentro do botão */
+    color: #fff; /* Define a cor do texto dentro do botão como branco */
+    font-weight: 500; /* Define o peso da fonte do texto dentro do botão */
+    font-size: 1.1rem; /* Define o tamanho da fonte do texto dentro do botão */
 }
 
 .container {
-    width: 80%;
-    height: 80vh;
-    display: flex;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+    width: 80%; /* Define a largura do contêiner como 80% */
+    height: 80vh; /* Define a altura do contêiner como 80% da altura da viewport */
+    display: flex; /* Utiliza Flexbox para layout do contêiner */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212); /* Adiciona sombra ao contêiner */
 }
 
 .form-img {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: red;
-    padding: 1rem;
+    width: 50%; /* Define a largura da imagem do formulário como 50% do contêiner */
+    display: flex; /* Utiliza Flexbox para layout da imagem do formulário */
+    justify-content: center; /* Centraliza horizontalmente a imagem do formulário */
+    align-items: center; /* Centraliza verticalmente a imagem do formulário */
+    background-color: red; /* Define a cor de fundo da imagem do formulário como vermelho */
+    padding: 1rem; /* Define o padding da imagem do formulário */
 }
 
 .form-img img {
-    width: 31rem;
+    width: 31rem; /* Define a largura da imagem interna como 31rem */
 }
 
 .form {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-    padding: 3rem;
-    background-color: #fff;
-
+    width: 50%; /* Define a largura do formulário como 50% do contêiner */
+    display: flex; /* Utiliza Flexbox para layout do formulário */
+    align-items: center; /* Alinha os itens do formulário verticalmente ao centro */
+    justify-content: space-between; /* Distribui os itens do formulário com espaço entre eles */
+    flex-direction: column; /* Alinha os itens do formulário em coluna */
+    padding: 3rem; /* Define o padding do formulário */
+    background-color: #fff; /* Define a cor de fundo do formulário como branco */
 }
 
 .form-header {
-    margin-bottom: 3rem;
-    display: flex;
-    justify-content: space-between;
+    margin-bottom: 3rem; /* Adiciona margem inferior ao cabeçalho do formulário */
 }
 
-.box-group {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 1 rem 0;
+.form-inputs {
+    width: 100%; /* Define a largura dos inputs do formulário como 100% */
 }
 
-.input input{
-    margin: 0.6rem 0;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.2);
-    border: none;
-    font-size: 0.8rem;
-    margin-left: 40px;
-    padding: 10px;
+.input input {
+    margin: 0.6rem 0; /* Adiciona margem vertical aos inputs */
+    border-radius: 5px; /* Adiciona bordas arredondadas aos inputs */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Adiciona sombra aos inputs */
+    border: none; /* Remove a borda dos inputs */
+    padding: 10px; /* Define o padding dos inputs */
+    width: calc(100% - 20px); /* Ajusta a largura do input para considerar o padding */
 }
 
 .button button {
-    width: 100%;
-    margin-top: 2.5rem;
-    border: none;
-    background-color: red;
-    padding: 0.62rem;
-    border-radius: 20px;
-    cursor: pointer ;
-    color: #fff;
-    margin-left: 25px;
+    width: 100%; /* Define a largura do botão como 100% */
+    margin-top: 2.5rem; /* Adiciona margem superior ao botão */
+    border: none; /* Remove a borda do botão */
+    background-color: red; /* Define a cor de fundo do botão como vermelho */
+    padding: 0.62rem; /* Define o padding do botão */
+    border-radius: 20px; /* Adiciona bordas arredondadas ao botão */
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
+    color: #fff; /* Define a cor do texto do botão como branco */
+    margin-right: 50px; /* Adiciona margem direita ao botão */
 }
 
 .password {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 30px;
-    font-size: 12px;
-
+    display: flex; /* Utiliza Flexbox para layout do campo de senha */
+    justify-content: center; /* Centraliza horizontalmente o campo de senha */
+    align-items: center; /* Centraliza verticalmente o campo de senha */
+    font-size: 12px; /* Define o tamanho da fonte do texto da senha */
 }
 
-.password a{
-    color: red;
+.password a {
+    color: red; /* Define a cor do link de senha como vermelho */
 }
-
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #fff;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-body {
-    font-family: sans-serif;
-}
-
-header {
-    background-color: white;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    position: fixed; 
-    width: 100%; 
-    z-index: 1000; 
-}
-
-main {
-    padding-top: 80px; 
-    padding-bottom: 60px; 
-}
-
-
 
 .content {
-    margin: 20px auto; 
-    text-align: center; 
+    margin-top: 100px; /* Adiciona margem superior ao conteúdo */
+    padding: 20px; /* Define o padding do conteúdo */
+    text-align: left; /* Alinha o texto do conteúdo à esquerda */
 }
 
 .content h1 {
-    margin-top: 220px;
-    color: red;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    color: red; /* Define a cor do título principal como vermelho */
+    font-size: 2.5rem; /* Define o tamanho da fonte do título principal */
+    margin-bottom: 20px; /* Adiciona margem inferior ao título principal */
 }
 
 .content h2 {
-    color: red;
-    font-size: 2rem;
-    margin: 20px 0; 
+    color: darkred; /* Define a cor do subtítulo como vermelho escuro */
+    font-size: 2rem; /* Define o tamanho da fonte do subtítulo */
+    margin-top: 20px; /* Adiciona margem superior ao subtítulo */
+    margin-bottom: 15px; /* Adiciona margem inferior ao subtítulo */
 }
 
-.statistics {
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    margin: 20px 0; 
-}
-
-.stat-item {
-    text-align: center; 
-    margin: 20px 0; 
-    width: 80%; 
-    padding: 15px;
-    background-color: #fff; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-    border-radius: 10px; 
-}
-
-.stat-item h3 {
-    color: red; 
-    font-size: 1.5rem; 
-    margin-bottom: 10px; 
-}
-
-.stat-item h4 {
-    color: darkred; 
-    font-size: 2rem;
-    margin: 0; 
-}
-
-.login-button {
-    text-align: center; 
+.content p {
+    font-size: 1.1rem; /* Define o tamanho da fonte do parágrafo */
+    line-height: 1.6; /* Define o espaçamento entre linhas do parágrafo */
+    margin-bottom: 15px; /* Adiciona margem inferior ao parágrafo */
+    max-width: 800px; /* Define a largura máxima do parágrafo */
 }
 
 footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #fff;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-    position: relative; 
+    text-align: center; /* Centraliza o texto do footer */
+    padding: 20px 0; /* Define o padding do footer */
+    background-color: #fff; /* Define a cor de fundo do footer como branco */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao footer */
+    position: relative; /* Mantém o footer na ordem normal do fluxo do documento */
+    width: 100%; /* Define a largura do footer como 100% */
+    margin-top:200px; /* Adiciona espaço acima do footer */
+}
+
+/* Estilização geral para a FAQ */
+.faq-content {
     width: 100%;
-    margin-top: 150px; 
+    padding: 20px;
+    margin-top: 60px;
+    background-color: #fff; /* Fundo branco para o conteúdo */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra ao redor da caixa */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.faq-item {
+    margin-bottom: 15px; /* Espaço entre os itens */
+    padding: 15px; /* Espaço interno */
+    border: 1px solid #ddd; /* Borda leve para os itens */
+    border-radius: 5px; /* Bordas arredondadas para cada item */
+    transition: background-color 0.3s; /* Transição suave para cor de fundo */
+}
+
+.faq-item:hover {
+    background-color: #f9f9f9; /* Muda a cor de fundo ao passar o mouse */
+}
+
+.faq-question {
+    font-weight: bold; /* Texto em negrito para as perguntas */
+    color: red; /* Cor do texto das perguntas */
+    cursor: pointer; /* Muda o cursor para indicar interatividade */
+}
+
+.faq-answer {
+    margin-top: 10px; /* Espaço acima da resposta */
+    color: #333; /* Cor do texto das respostas */
+    font-size: 0.9rem; /* Tamanho da fonte das respostas */
+}
+
+
+.faq-img {
+    width: 300px; /* Define a largura da imagem */
+    height: auto; /* Mantém a proporção */
+    margin-right: 20px; /* Espaçamento à direita da imagem */
+    background-color: red;
+}
+
+.help-content {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    margin-top: -200px;
+}
+
+.titulo-help {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    margin-top: 30px;
+}
+
+.help-content {
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.contatos {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 50px;
+}
+
+.inf-help {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 50px;
+}
+
+.form-cont {   
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        margin-top: 50px;
+}
+
+.list-item {
+    list-style-type: none;
+    justify-content: center;
+    display: flex;
+}
+
+.footer-help {
+    margin-top: 1px;
 }
